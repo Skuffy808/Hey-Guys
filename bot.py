@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 import discord
 
-heyguysList = ["Hey Guys", "hey guys"]
+hey_guys_list = ["Hey Guys", "hey guys"]
 
 load_dotenv()
 
@@ -12,7 +12,7 @@ class MyClient(discord.Client):
 
     async def on_message(self, message):
         if message.channel.name == "hey-guys":
-            if message.content in heyguysList:
+            if message.content in hey_guys_list:
                 await message.add_reaction('✅')
             else:
                 await message.add_reaction('❌')
